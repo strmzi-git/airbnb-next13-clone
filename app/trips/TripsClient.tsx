@@ -40,20 +40,22 @@ const TripsClient: React.FC<TripsClientProps> = function ({
   );
   return (
     <Container>
-      <Heading title="Trips" subtitle="This is where you've been going" />
-      <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-8">
-        {reservations.map((res) => (
-          <ListingCard
-            key={res.id}
-            data={res.listing}
-            reservation={res}
-            actionId={res.id}
-            onAction={cancel}
-            disabled={deletingId === res.id}
-            actionLabel="Cancel reservation"
-            currentUser={currentUser}
-          />
-        ))}
+      <div className="mt-20">
+        <Heading title="Trips" subtitle="This is where you've been going" />
+        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-8">
+          {reservations.map((res) => (
+            <ListingCard
+              key={res.id}
+              data={res.listing}
+              reservation={res}
+              actionId={res.id}
+              onAction={cancel}
+              disabled={deletingId === res.id}
+              actionLabel="Cancel reservation"
+              currentUser={currentUser}
+            />
+          ))}
+        </div>
       </div>
     </Container>
   );
