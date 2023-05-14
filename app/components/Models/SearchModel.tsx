@@ -9,7 +9,6 @@ import CountrySelect, { CountrySelectValue } from "../Inputs/CountrySelect";
 import queryString from "query-string";
 import { formatISO } from "date-fns";
 import Heading from "../Heading";
-import Map from "../Map";
 import Calendar from "../Inputs/Calendar";
 import Counter from "../Inputs/Counter";
 
@@ -35,7 +34,7 @@ const SearchModel = function () {
     key: "selection",
   });
 
-  const map = useMemo(
+  const Map = useMemo(
     () => dynamic(import("../Map"), { ssr: false }),
     [location]
   );
