@@ -25,7 +25,7 @@ export default async function getListings(params: IListingParams) {
     } = params;
     let query: any = {};
     if (userId) {
-      query = { userId: userId };
+      query.userId = userId;
     }
     if (category) {
       query.category = category;

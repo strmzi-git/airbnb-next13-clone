@@ -80,9 +80,9 @@ const SearchModel = function () {
       { skipNull: true }
     );
 
-    router.push(url);
     setStep(STEPS.LOCATION);
     searchModel.onClose();
+    router.push(url);
   }, [
     step,
     location,
