@@ -1,8 +1,8 @@
 import "./globals.css";
 import { Nunito } from "next/font/google";
 export const metadata = {
-  title: "airbnb",
-  description: "Airbnb clone",
+  title: "Property Renting",
+  description: "Platform to rent properties for the holiday!",
 };
 import Navbar from "./components/navbar/Navbar";
 import ClientOnly from "./components/ClientOnly";
