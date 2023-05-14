@@ -13,10 +13,11 @@ interface HomeProps {
 
 export default async function Home({ searchParams }: HomeProps) {
   console.log(searchParams);
-  const listings = await getListings(searchParams);
+  // const listings = await getListings(searchParams);
   const currentUser = await getCurrentUser();
 
-  if (listings.length === 0) {
+  // if (listings.length === 0) {
+  if (false) {
     return (
       <ClientOnly>
         <EmptyState />
@@ -38,13 +39,13 @@ export default async function Home({ searchParams }: HomeProps) {
             2xl:grid-cols-6
             gap-8"
         >
-          {listings.map((listing: SafeListing) => (
+          {/* {listings.map((listing: SafeListing) => (
             <ListingCard
               key={listing.id}
               data={listing}
               currentUser={currentUser}
             />
-          ))}
+          ))} */}
         </div>
       </Container>
     </ClientOnly>
