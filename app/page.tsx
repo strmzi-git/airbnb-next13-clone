@@ -7,11 +7,12 @@ import EmptyState from "./components/EmptyState";
 import ListingCard from "./components/listings/ListingCard";
 import { SafeListing } from "./types";
 
-interface HomeProps {
-  searchParams: IListingParams;
-}
+// interface HomeProps {
+//   searchParams: IListingParams;
+// }
 
-export default async function Home({ searchParams }: HomeProps) {
+export default async function Home(searchParams: any) {
+  console.log(searchParams);
   const listings = await getListings(searchParams);
   const currentUser = await getCurrentUser();
 
